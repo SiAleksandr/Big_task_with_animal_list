@@ -1,9 +1,12 @@
 package content.varieties;
+import java.util.ArrayList;
 
 public abstract class Animal {
-    Integer groupId;
+    public Integer groupId;
+    public String groupName;
     public Animal() {};
-    public void setId(Integer groupNumber) {
-        groupId = groupNumber;
+    public void setGroups(ArrayList<String> groupList, int groupNumber) {
+        this.groupId = groupNumber;
+        this.groupName = groupList.get(groupNumber);
     }
 }
